@@ -206,11 +206,11 @@ class Contract {
 
     public void status() {
         System.out.println(
-            "Task=" + task.title +
-            " | State=" + state.label() +
-            " | EscrowFunded=" + escrowFunded +
-            " | EscrowFrozen=" + escrowFrozen +
-            " | PaymentReleased=" + paymentReleased
+            "Task = " + task.title +
+            " \n->State = " + state.label() +
+            " \n->EscrowFunded = " + escrowFunded +
+            " \n->EscrowFrozen = " + escrowFrozen +
+            " \n->PaymentReleased = " + paymentReleased
         );
     }
 

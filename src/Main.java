@@ -224,9 +224,9 @@ public class Main {
     private static void factory() {
         System.out.println("Factory Method");
         Task[] tasks = {
-            TaskFactory.createTask("delivery", "Deliver package to downtown", 40.0),
-            TaskFactory.createTask("tutoring", "Math tutoring for 2 hours", 60.0),
-            TaskFactory.createTask("moving", "Help move furniture", 95.0)
+            TaskFactory.createTask("delivery", "Deliver package to downtown", 25.0),
+            TaskFactory.createTask("tutoring", "Math tutoring for 2 hours", 100.0),
+            TaskFactory.createTask("moving", "Help move furniture", 150.0)
         };
         for (Task task : tasks) {
             System.out.println(task.summary());
@@ -235,7 +235,7 @@ public class Main {
 
     private static void stateNormalFlow() {
         System.out.println("\nState: Normal Contract Flow");
-        Task task = TaskFactory.createTask("delivery", "Deliver package to downtown", 40.0);
+        Task task = TaskFactory.createTask("delivery", "Deliver package to downtown", 25.0);
         Contract contract = new Contract(task, "Alice", "Bob");
         contract.status();
         contract.startWork();
@@ -248,7 +248,7 @@ public class Main {
 
     private static void stateDisputeFlow() {
         System.out.println("\nState: Dispute Flow");
-        Task task = TaskFactory.createTask("tutoring", "Math tutoring for 2 hours", 60.0);
+        Task task = TaskFactory.createTask("tutoring", "Math tutoring for 2 hours", 200.0);
         Contract contract = new Contract(task, "Carol", "Dave");
         contract.fundEscrow();
         contract.completeWork();
